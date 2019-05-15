@@ -1,0 +1,499 @@
+
+
+/******************************************************************
+**                             COMMON                            **
+*******************************************************************/
+body, html {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Baskerville', serif;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+ 
+}
+
+.font-size_small{
+  font-size: 14px;
+}
+
+.font-size_large{
+font-size: 18px;
+}
+
+ul {
+list-style-type: none;
+margin: 0 auto;
+padding: 0;
+overflow: hidden;
+text-align: center;
+}
+
+li{
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px;
+text-decoration: none;
+}
+
+/******************************************************************
+**                             HEADER                            **
+*******************************************************************/
+
+header{
+text-align: center;
+display: fixed;
+/* background-color: blanchedalmond; */
+top:0px;
+left:0px;
+position: fixed;
+width: 100%;
+
+
+}
+
+header .logo, .menu{
+display: inline;
+}
+
+header .logo{
+display: inline-flex;
+width: 90%;
+justify-content: space-between;
+/* margin:0 10px; */
+/* text-align: center; */
+}
+
+header .menu li a{
+color: #000;
+}
+
+header{
+/* background-color: #141414; */
+color: #000;
+}
+
+.menu_header{
+  /* display: none; */
+}
+
+.menu_mobile{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  z-index: 10000;
+  /* background-color: aquamarine; */
+}
+
+header .logo_icon a{
+  font-size: 36px;
+  color: #000;
+  font-weight: 400;
+  font-family: 'Monsieur La Doulaise', cursive;
+}
+
+.menu_mobile_icon{
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+  
+.menu{
+  /* display: none; */
+}
+  .menu_header{
+
+    background-color: antiquewhite;
+  }
+
+.menu_web{
+  /* position: absolute; */
+  z-index: 1000;
+}
+
+
+/******************************************************************
+**                              MAIN                             **
+*******************************************************************/
+
+
+.wrapper{
+  margin-top: 57px;
+  /* margin-top: 120px; */
+}
+.wrapper .section_home{
+  
+
+}
+
+
+.wrapper .section_home .title{
+ 
+}
+
+.wrapper .section_home .content{
+ 
+}
+
+
+.wrapper .title .position{
+  font-size: 16px;
+  font-style: italic;
+  color: lightslategray;
+}
+
+
+
+
+/******************************************************************
+**                             BOTTOM                            **
+*******************************************************************/
+
+.bottom{
+color: #fff;
+width: 100%;
+position: fixed;
+/* bottom: 0; */
+bottom:0px;
+    /* left:0px; */
+text-align: center;
+/* background-color: chartreuse; */
+}
+
+.bottom ul{
+  width: 100%;
+}
+
+.bottom .menu li a i{
+  color: lightslategrey;
+}
+
+
+
+/******************************************************************
+**                           RESPONSIVE                          **
+*******************************************************************/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (min-width: 768px ) {
+
+  /* HEADER */
+
+  header{
+    box-shadow: 3px 0px 34px 2px rgba(209,209,209, 0.5);
+  }
+  header{
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    padding: 0;
+  }
+
+  .menu_mobile_icon{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+
+  
+  .menu_mobile{
+    display: none;
+  }
+
+  header .logo{
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  header ul  li{
+    display: flex;
+  }
+
+  header ul li{
+    text-align: center;
+  }
+
+  header ul, .bottom ul{
+      margin: 0 auto;
+      text-align: center;
+  }
+
+
+
+  /* MAIN   */
+
+  .wrapper{
+      width: 92%;
+      /* height: 100%; */
+      margin-left: 5%;
+      margin-right: 3%;
+      position: fixed;
+  }
+
+  .wrapper .section_home .title{
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* BOTTOM */
+
+  .bottom ul   {
+    position: absolute; 
+    bottom: 0;
+    display: grid;
+    text-align: center;
+    width: 100%;
+  }  
+  
+  .bottom ul li{
+    padding: 20px 0;
+  }
+
+  .bottom{
+    width: 3%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    place-items: bottom;
+    box-shadow: 3px 0px 34px 2px rgba(209,209,209, 0.5);
+  }
+  .bottom .menu li{
+    transform: rotate(90deg);
+    }
+    
+  .bottom .menu li a{
+  color: #000;
+  border-bottom: solid 1px lightslategrey;
+  }
+
+  /* .title{ 
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: text-pop-up-top 2s ease-out forwards ;
+  }
+  
+  .content{
+    position: absolute;
+    width: 40%;
+    float: right;
+    right: 0;
+    opacity: 0;
+    padding-right: 100px;
+    animation: text-pop-up-right 2s ease-out 2s forwards ;
+  }
+  
+  @keyframes text-pop-up-right {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-350%);
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes text-pop-up-top {
+    0% {
+      opacity: 0.5;
+      scale: 1;
+      transform: scale(0.5);
+      transform: translateX(0);
+      
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-100%);
+      transform-origin: 50% 50%;
+    }
+  } */
+}
+
+
+/* Beggin Glitched Text */
+
+
+
+.glitch {
+  font-family: 'Bungee', cursive;
+  font-size: 3.5rem;
+  color: black;
+  position: relative;
+}
+
+
+
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(61px, 9999px, 33px, 0);
+  }
+  5% {
+    clip: rect(67px, 9999px, 92px, 0);
+  }
+  10% {
+    clip: rect(4px, 9999px, 5px, 0);
+  }
+  15% {
+    clip: rect(44px, 9999px, 27px, 0);
+  }
+  20% {
+    clip: rect(47px, 9999px, 89px, 0);
+  }
+  25% {
+    clip: rect(86px, 9999px, 13px, 0);
+  }
+  30% {
+    clip: rect(70px, 9999px, 24px, 0);
+  }
+  35% {
+    clip: rect(10px, 9999px, 2px, 0);
+  }
+  40% {
+    clip: rect(16px, 9999px, 30px, 0);
+  }
+  45% {
+    clip: rect(72px, 9999px, 63px, 0);
+  }
+  50% {
+    clip: rect(15px, 9999px, 70px, 0);
+  }
+  55% {
+    clip: rect(63px, 9999px, 37px, 0);
+  }
+  60% {
+    clip: rect(32px, 9999px, 26px, 0);
+  }
+  65% {
+    clip: rect(71px, 9999px, 70px, 0);
+  }
+  70% {
+    clip: rect(56px, 9999px, 16px, 0);
+  }
+  75% {
+    clip: rect(3px, 9999px, 49px, 0);
+  }
+  80% {
+    clip: rect(37px, 9999px, 49px, 0);
+  }
+  85% {
+    clip: rect(88px, 9999px, 45px, 0);
+  }
+  90% {
+    clip: rect(65px, 9999px, 34px, 0);
+  }
+  95% {
+    clip: rect(70px, 9999px, 4px, 0);
+  }
+  100% {
+    clip: rect(20px, 9999px, 79px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 3px;
+  text-shadow: -2px 0 red;
+  top: 0;
+  color:  black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(61px, 9999px, 67px, 0);
+  }
+  5% {
+    clip: rect(61px, 9999px, 29px, 0);
+  }
+  10% {
+    clip: rect(16px, 9999px, 30px, 0);
+  }
+  15% {
+    clip: rect(30px, 9999px, 38px, 0);
+  }
+  20% {
+    clip: rect(11px, 9999px, 13px, 0);
+  }
+  25% {
+    clip: rect(3px, 9999px, 21px, 0);
+  }
+  30% {
+    clip: rect(20px, 9999px, 52px, 0);
+  }
+  35% {
+    clip: rect(8px, 9999px, 51px, 0);
+  }
+  40% {
+    clip: rect(77px, 9999px, 82px, 0);
+  }
+  45% {
+    clip: rect(84px, 9999px, 20px, 0);
+  }
+  50% {
+    clip: rect(57px, 9999px, 90px, 0);
+  }
+  55% {
+    clip: rect(6px, 9999px, 63px, 0);
+  }
+  60% {
+    clip: rect(35px, 9999px, 70px, 0);
+  }
+  65% {
+    clip: rect(77px, 9999px, 66px, 0);
+  }
+  70% {
+    clip: rect(65px, 9999px, 30px, 0);
+  }
+  75% {
+    clip: rect(64px, 9999px, 24px, 0);
+  }
+  80% {
+    clip: rect(85px, 9999px, 23px, 0);
+  }
+  85% {
+    clip: rect(62px, 9999px, 100px, 0);
+  }
+  90% {
+    clip: rect(36px, 9999px, 42px, 0);
+  }
+  95% {
+    clip: rect(88px, 9999px, 94px, 0);
+  }
+  100% {
+    clip: rect(56px, 9999px, 10px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -3px;
+  text-shadow: 2px 0 rgb(51, 51, 212);
+  top: 0;
+  color:  black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* End Glitched Text */

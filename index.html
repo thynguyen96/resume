@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo_icon">
+                <a href="">thy.</a>
+            </div>
+            <div class="menu_mobile_icon" >
+                <a href="#contact" id="button">
+                    <i class="fas fa-bars" onclick="myFunction()"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="menu_header" id="myDIV">
+            <ul class="menu menu_web font-size_small">
+                <li>
+                    <a href="#home" onclick="openSection('home')">
+                        <img src="./assets/images/icon/home.png" alt="home">
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" onclick="openSection('about')">
+                        <img src="./assets/images/icon/user.png" alt="about">
+                    </a>
+                </li>
+                <li>
+                    <a href="#skill" onclick="openSection('skill')">
+                        <img src="./assets/images/icon/suitcase.png" alt="skill">
+                    </a>
+                </li>
+                <li>
+                    <a href="#work" onclick="openSection('work')">
+                        <img src="./assets/images/icon/contact.png" alt="work">
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="openSection('contact')">
+                        <img src="./assets/images/icon/contact.png" alt="contact">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <div class="wrapper">
+        <section id="home" class="section_home main_section">
+            <div>
+                <div class="title">
+                    <!-- <span class="hello">HE LLO,</span><br> -->
+                    <div class="glitch" data-text="HE LLO,">HE LLO,</div>
+                    <div class="my_name">
+                        <span>I'm</span> <br>
+                        <span>Thy Nguyen.</span> <br>
+                        <span>Web Developer</span>
+                    </div>
+                    <span  class="position">Frontend Developer / Angular</span>
+                </div>
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit id excepturi facere sunt debitis
+                    deleniti odit nostrum est numquam, beatae, ratione dolores iusto similique perferendis reiciendis
+                    neque?
+                    Magni, ipsa placeat.
+                </div>
+            </div>
+            <!-- <img src="./assets/images/.png" alt="" > -->
+        </section>
+        <section id="about" class="section_about main_section" style="display:none">
+            <h2>Paris</h2>
+            <p>lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the
+                industry's standard dummy text ever since the 1500s,
+            </p>
+        </section>
+
+        <section id="skill" class="section_skill main_section" style="display:none">
+            <h2>Tokyo</h2>
+            <p>lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the
+                industry's standard dummy text ever since the 1500s,
+            </p>
+        </section>
+
+        <section id="work" class="section_work main_section" style="display:none">
+            <h2>Tokyo</h2>
+            <p>lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the
+                industry's standard dummy text ever since the 1500s,
+            </p>
+        </section>
+
+        <section id="contact" class="section_contact main_section" style="display:none">
+            <h2>Tokyo</h2>
+            <p>lorem ipsum is simply dummy text of the printing and typesetting industry. lorem ipsum has been the
+                industry's standard dummy text ever since the 1500s,
+            </p>
+        </section>
+    </div>
+
+    <bottom class="bottom">
+        <ul class="menu">
+            <li>
+                <a href="#home">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </bottom>
+
+
+    <script>
+        function openSection(sectionName) {
+            var i;
+            var x = document.getElementsByClassName("main_section");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(sectionName).style.display = "grid";
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }
+    </script>
+
+  
+</body>
+
+
+</html>
+
+
+<!-- https://www.pinterest.com/pin/472666923388432931/ -->
+<!-- https://learncssgrid.com/#grid-container -->
